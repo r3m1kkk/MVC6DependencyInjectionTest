@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using MyWebApp.Interfaces;
+using MyWebApp.Models;
 
-namespace MyWebApp.Models
+namespace MyWebApp.Repositories
 {
     public class CharacterRepository : ICharacterRepository
     {
