@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using MyWebApp.Models;
 using MyWebApp.Services;
 using MyWebApp.Interfaces;
+using MyWebApp.Repositories;
 
 namespace MyWebApp
 {
@@ -59,6 +60,8 @@ namespace MyWebApp
             services.AddTransient<ISmsSender, AuthMessageSender>();
             services.AddScoped<ICharacterRepository, CharacterRepository>();
             services.AddTransient<IDateTime, SystemDateTime>();
+            services.AddTransient<IToDoItemRepository, ToDoItemRepository>();
+            services.AddTransient<StatisticsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
