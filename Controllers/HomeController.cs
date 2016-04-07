@@ -35,9 +35,9 @@ namespace MyWebApp.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult About([FromServices] IDateTime dateTime)
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Currently on the server the time is " + dateTime.Now;
 
             return View();
         }
