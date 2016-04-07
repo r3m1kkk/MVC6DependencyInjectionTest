@@ -58,6 +58,7 @@ namespace MyWebApp
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
             services.AddScoped<ICharacterRepository, CharacterRepository>();
+            services.AddTransient<IDateTime, SystemDateTime>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
