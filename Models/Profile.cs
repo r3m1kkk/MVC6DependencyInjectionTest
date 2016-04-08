@@ -1,11 +1,14 @@
-public class Profile
+namespace MyWebApp.Models
 {
-    public Profile()
+    public class Profile
     {
-    }
+        public Profile()
+        {
+        }
 
-    public string FavColor { get; set; }
-    public string Gender { get; set; }
-    public string Name { get; set; }
-    public object State { get; set; }
+        public string FavColor { get; set; }
+        public string Gender { get; set; }
+        public string Name { get; set; }
+        public State State { get; set; }
+    }
 }
