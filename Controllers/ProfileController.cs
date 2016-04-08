@@ -1,0 +1,23 @@
+using Microsoft.AspNet.Mvc;
+using MyWebApp.Models;
+
+namespace MyWebApp.Controllers
+{
+    public class ProfileController : Controller
+    {
+        [Route("Profile")]
+        public IActionResult Index()
+        {
+            // TODO: look up profile based on logged-in user
+            var profile = new Profile()
+            {
+                Name = "Steve",
+                FavColor = "Blue",
+                Gender = "Male",
+                State = new State("Ohio","OH")
+            };
+            return View(profile);
+        }
+
+    }
+}

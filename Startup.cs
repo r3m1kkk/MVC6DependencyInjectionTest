@@ -62,6 +62,7 @@ namespace MyWebApp
             services.AddTransient<IDateTime, SystemDateTime>();
             services.AddTransient<IToDoItemRepository, ToDoItemRepository>();
             services.AddTransient<StatisticsService>();
+            services.AddTransient<ProfileOptionsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
