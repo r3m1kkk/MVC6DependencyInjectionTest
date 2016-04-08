@@ -3,14 +3,10 @@
 @using MyWebApp.Services
 @model IEnumerable<ToDoItem>
 @inject StatisticsService StatsService
-<!DOCTYPE html>
-<html>
-<head>
-    <title>To Do Items</title>
-</head>
-<body>
-    <div>
-        <h1>To Do Items</h1>
+
+<h1>To Do Items</h1>
+<div class="row">
+    <div class="col-md-12">
         <ul>
             <li>Total Items: @await StatsService.GetCount()</li>
             <li>Completed: @await StatsService.GetCompletedCount()</li>
@@ -32,5 +28,4 @@
             }
         </table>
     </div>
-</body>
-</html>
+</div>
